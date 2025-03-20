@@ -4,7 +4,7 @@ import { createRoom, getRoomByID, getRoomsByUserID } from './tutor.controller.js
 
 const roomRouter = express.Router();
 
-// roomRouter.get('/', roomData);
+roomRouter.get('/', jwtAuth, roomData);
 
 roomRouter.post('/', jwtAuth, createRoom);
 
