@@ -1,6 +1,6 @@
 import express from 'express';
-import { getChats } from './chats.controller';
-import jwtAuth from '../../middleware/jwt.middleware';
+import { getChats, addMessage } from './chats.controller.js';
+import jwtAuth from '../../middleware/jwt.middleware.js';
 
 const chatRouter = express.Router();
 

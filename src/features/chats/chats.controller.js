@@ -1,6 +1,6 @@
-import { tutorModel } from "../tutor/tutor.schema";
-import { lstm } from "../../utils/lstm";
-import { MessageModel } from "./chats.schema";
+import { tutorModel } from "../tutor/tutor.schema.js";
+import { lstm } from "../../utils/lstm.js";
+import { MessageModel } from "./chats.schema.js";
 
 
 export const getChats = async (req, res) => {

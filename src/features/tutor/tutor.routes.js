@@ -1,10 +1,10 @@
 import express from 'express';
 import jwtAuth from '../../middleware/jwt.middleware.js';
-import { createRoom, getRoomByID, getRoomsByUserID } from './tutor.controller.js';
+import { createRoom, getRoomByID, getRooms, getRoomsByUserID } from './tutor.controller.js';
 
 const roomRouter = express.Router();
 
-roomRouter.get('/', jwtAuth, roomData);
+roomRouter.get('/', jwtAuth, getRooms);
 
 roomRouter.post('/', jwtAuth, createRoom);
 

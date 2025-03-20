@@ -7,6 +7,7 @@ import { connectUsingMongoose } from './src/config/mongooseConfig.js';
 import AuthRouter from './src/features/auth/auth.routes.js';
 import roomRouter from './src/features/tutor/tutor.routes.js';
 import handleSocketEvents from './src/config/socket.js';
+import chatRouter from './src/features/chats/chats.routes.js';
 // import { handleSocketEvents } from './src/socketEvents.js'; // Ensure this function exists
 
 const app = express();
@@ -41,7 +42,7 @@ handleSocketEvents(io);
 // Routes
 app.use('/api/user', AuthRouter);
 app.use('/api/room', roomRouter);
-app.use('/api/chats', roomRouter);
+// app.use('/api/chats', chatRouter);
 
 
 // Start server after connecting to DB
