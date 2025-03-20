@@ -19,6 +19,7 @@ export const register = async (req, res) => {
             {
                 userID: user._id,
                 email: user.email,
+                name: user.name,
                 type: user.type,
             },
             'AIb6d35fvJM4O9pXqXQNla2jBCH9kuLc',
@@ -49,6 +50,8 @@ export const login = async (req, res) => {
                 {
                     userID: user._id,
                     email: user.email,
+                    name: user.name,
+                    type: user.type,
                 },
                 'AIb6d35fvJM4O9pXqXQNla2jBCH9kuLc',
                 {

@@ -5,7 +5,7 @@ const tutorSchema = new mongoose.Schema({
     topic: { type: String, required: true },
     content: { type: String, required: true },
     authId: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
-    // messages: [{ type: mongoose.Schema.Types.ObjectId, ref: "Message" }],
+    messages: [{ type: mongoose.Schema.Types.ObjectId, ref: "Message" }],
 })
 
 export const tutorModel = mongoose.model("room", tutorSchema);
